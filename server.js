@@ -15,8 +15,8 @@ io.on("connection", (socket) => {
     });
 
     socket.on("init_connection", (msg) => {
-        console.log("message: " + msg);
-        io.emit("init_connection_resp", msg);
+        console.log("message: " + JSON.stringify(msg));
+        io.emit("init_connection_resp", JSON.stringify(msg));
     });
 });
 
